@@ -6,7 +6,7 @@ const facturasController = require('../controllers/facturas');
 /* POST to sign an xml, with validation middleware. */
 router.post('/firmar',validateInvoice, function(req, res, next) {
   console.log('  req.body',   req.body);
-  if(req.body === undefined) {
+  if(req.body.length === 0) {
     res.status(400).send('No XML received');
     return;
   }
