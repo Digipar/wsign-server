@@ -92,7 +92,7 @@ const getCDC = (xml) => {
 };
 
 module.exports = {
-  signXML: (xmlReceived) => {
+  sign: (xmlReceived) => {
     const hash = require("crypto").createHash("sha256");
     // start signing
     const sig = new SignedXml();

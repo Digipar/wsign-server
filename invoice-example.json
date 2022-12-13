@@ -1,0 +1,133 @@
+{
+  "dId": "props.transaccionId",
+  "xDE": {
+    "rDE": {
+      "DE": {
+        "$": { "Id": "props.dEId" },
+        "dDVId": "props.dDVId",
+        "dFecFirma": "props.stockmovFecha",
+        "dSisFact": "1",
+        "gOpeDE": {
+          "iTipEmi": "props.iTipEmi",
+          "dDesTipEmi": "Normal",
+          "dCodSeg": "props.dCodSeg"
+        },
+        "gTimb": {
+          "iTiDE": "7",
+          "dDesTiDE": "Nota de remisión electrónica",
+          "dNumTim": "props.timbrado.timbradoPropioNumero",
+          "dEst": "props.timbrado.establecimientoCod",
+          "dPunExp": "props.timbrado.puntoExpedicion",
+          "dNumDoc": "props.puntoExpedicionNroFormat",
+          "dFeIniT": "props.stockmovFecha"
+        },
+        "gDatGralOpe": {
+          "dFeEmiDE": "props.stockmovFecha",
+          "gEmis": {
+            "dRucEm": "props.empresaRuc",
+            "dDVEmi": "props.dDVEmi",
+            "iTipCont": "props.tipoContribuyente",
+            "dNomEmi": "props.empresaRazonSocial",
+            "dDirEmi": "props.empresaDireccion",
+            "dNumCas": "0",
+            "cDepEmi": "props.empresaDepartamentoCod",
+            "dDesDepEmi": "props.empresaDepartamento",
+            "cDisEmi": "props.empresaDistritoCod",
+            "dDesDisEmi": "props.empresaDistrito",
+            "cCiuEmi": "props.empresaCiudadCod",
+            "dDesCiuEmi": "props.empresaCiudad",
+            "dTelEmi": "props.empresaTelefono",
+            "dEmailE": "props.empresaCorreoE",
+            "dDenSuc": "props.empresaRazonSocial",
+            "gActEco": {
+              "cActEco": "props.empresaActCod",
+              "dDesActEco": "props.empresaActDesc"
+            }
+          },
+          "gDatRec": {
+            "iNatRec": "1",
+            "iTiOpe": "1",
+            "cPaisRec": "props.clienteCodPaisSET",
+            "dDesPaisRe": "props.clientePaisNombre",
+            "iTiContRec": "props.iTiContRec",
+            "dRucRec": "props.clienteRuc",
+            "dDVRec": "props.dDVRec",
+            "dNomRec": "props.clienteNombre",
+            "dDirRec": "props.clienteDireccion",
+            "dNumCasRec": "0",
+            "cDepRec": "props.clienteDepartamentoId",
+            "dDesDepRec": "props.clienteDepartamentoNombre",
+            "cDisRec": "props.clienteCodDistritoSET",
+            "dDesDisRec": "props.clienteDistritoNombre",
+            "cCiuRec": "props.clienteCiudadId",
+            "dDesCiuRec": "props.clienteCiudadNombre",
+            "dTelRec": "props.clienteTelefono",
+            "dEmailRec": "props.clienteCorreoElectronico",
+            "dCodCliente": "props.clienteId"
+          }
+        },
+        "gDtipDE": {
+          "gCamNRE": {
+            "iMotEmiNR": "props.iMotEmiNR",
+            "dDesMotEmiNR": "props.dDesMotEmiNR",
+            "iRespEmiNR": "2",
+            "dDesRespEmiNR": "Poseedor de la factura y bienes",
+            "dKmR": "props.stockmovExternoKmEstimadoRecorrido"
+          },
+          "gCamItem": {
+            "dCodInt": "props.materialId",
+            "dDesProSer": "props.materialDesc",
+            "cUniMed": "83",
+            "dDesUniMed": "Kilogramos",
+            "dCantProSer": "props.pesoNeto2"
+          },
+          "gTransp": {
+            "iTipTrans": "2",
+            "dDesTipTrans": "Tercero",
+            "iModTrans": "1",
+            "dDesModTrans": "Terrestre",
+            "iRespFlete": "1",
+            "dIniTras": "moment(props.stockmovFecha).format('DD-MM-YYYY')",
+            "dFinTras": "moment(props.stockmovFecha).add(7, 'days').format('DD-MM-YYYY')",
+            "gCamSal": {
+              "dDirLocSal": "props.logLocalOrigenDireccion",
+              "dNumCasSal": "0",
+              "cDepSal": "props.logLocalOrigenDepartamentoId",
+              "dDesDepSal": "props.logLocalOrigenDepartamentoNombre",
+              "cDisSal": "props.logLocalOrigenCodDistritoSET",
+              "dDesDisSal": "props.logLocalOrigenDistritoNombre",
+              "cCiuSal": "props.logLocalOrigenCiudadId",
+              "dDesCiuSal": "props.logLocalOrigenCiudadNombre"
+            },
+            "gCamEnt": {
+              "dDirLocEnt": "props.logLocalDestinoDireccion",
+              "dNumCasEnt": "0",
+              "cDepEnt": "props.logLocalDestinoDepartamentoId",
+              "dDesDepEnt": "props.logLocalDestinoDepartamentoNombre",
+              "cDisEnt": "props.logLocalDestinoCodDistritoSET",
+              "dDesDisEnt": "props.logLocalDestinoDistritoNombre",
+              "cCiuEnt": "props.logLocalDestinoCiudadId",
+              "dDesCiuEnt": "props.logLocalDestinoCiudadNombre"
+            },
+            "gVehTras": {
+              "dTiVehTras": "Terrestre",
+              "dMarVeh": "props.stockmovExternoTranspMarcaCamion",
+              "dTipIdenVeh": "2",
+              "dNroMatVeh": "props.stockmovExternoTranspChapaCamion"
+            },
+            "gCamTrans": {
+              "iNatTrans": "1",
+              "dNomTrans": "props.transportadoraNombre",
+              "dRucTrans": "props.transportadoraRuc",
+              "dDVTrans": "props.dDVTrans",
+              "dNumIDChof": "props.stockmovExternoTranspChoferCedula",
+              "dNomChof": "props.stockmovExternoTranspChoferNombre",
+              "dDomFisc": "props.transportadoraDireccion",
+              "dDirChof": "props.transportadoraDireccion"
+            }
+          }
+        }
+      }
+    }
+  }
+}
