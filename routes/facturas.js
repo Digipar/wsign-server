@@ -13,7 +13,9 @@ router.post('/generar-firmar',validateJson, function(req, res, next) {
     return;
   }
   const xml = invoice.generateXml(req.body);
-  res.send(xml);
+  const xmlReceived = Buffer.from(xml).toString('utf8');
+  const xmlSigned = signer.sign(xmlReceived);  
+  res.send(xmlSigned);
 });
 /* POST to sign an xml, with validation middleware. */
 router.post('/firmar',validateXml, function(req, res, next) {

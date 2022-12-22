@@ -17,6 +17,7 @@ const getDigestValue = (xml) => {
 };
 
 const getQRData = (xml, digestValue) => {
+  console.log('xml', xml)
   let QRData = {};
   parser.parseString(xml, function (err, result) {
     const nVersion =
@@ -118,19 +119,19 @@ module.exports = {
     // construct the URL
     // get the digestValue
     const digestValue = getDigestValue(xmlSigned);
-    const {
-      nVersion,
-      dFeEmiDE,
-      dFeEmiDEHex,
-      dRucRec,
-      dTotGralOpe,
-      dTotIVA,
-      cItems,
-      DigestValue,
-      DigestValueHex,
-      IdcSC,
-      CSC,
-    } = getQRData(xmlReceived, digestValue);
+      const {
+        nVersion,
+        dFeEmiDE,
+        dFeEmiDEHex,
+        dRucRec,
+        dTotGralOpe,
+        dTotIVA,
+        cItems,
+        DigestValue,
+        DigestValueHex,
+        IdcSC,
+        CSC,
+      } = getQRData(xmlReceived, digestValue);
     // get the Id
     const cdc = getCDC(xmlReceived);
     const id = cdc;
