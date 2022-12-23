@@ -7,6 +7,8 @@ module.exports = {
         invoiceData.xDE.rDE["$"] = {"xmlns": "http://ekuatia.set.gov.py/sifen/xsd","xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance", "xsi:schemaLocation": "http://ekuatia.set.gov.py/sifen/xsd siRecepDE_v150.xsd"}
         // date in format AAAA-MM-DDThh:mm:ss
         invoiceData.xDE.rDE.DE.dFecFirma = new Date().toISOString().slice(0, 19);
+        invoiceData.xDE.rDE.gCamFuFD={};
+        invoiceData.xDE.rDE.gCamFuFD.dCarQR={};
         const obj = {
             "soap:Envelope": {
                 $: { 'xmlns:soap': "http://www.w3.org/2003/05/soap-envelope" },
